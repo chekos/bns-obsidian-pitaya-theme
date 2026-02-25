@@ -1,7 +1,7 @@
 {
-	"name": "Sample Theme",
-	"version": "1.0.0",
+	"name": "BNS Obsidian Pitaya Theme",
+	"version": "0.1.0",
 	"minAppVersion": "1.0.0",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md"
+	"author": "BNS Studio",
+	"authorUrl": "https://github.com/chekos"
 }

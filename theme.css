@@ -1,34 +1,104 @@
-body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
-}
+.theme-dark {
+	/* === Backgrounds (deep purple-black tones) === */
+	--color-base-00: #130C29;
+	--color-base-05: #151030;
+	--color-base-10: #181036;
+	--color-base-20: #1E1E3F;
+	--color-base-25: #221845;
+	--color-base-30: #261B4D;
+	--color-base-35: #2D2455;
+	--color-base-40: #372B64;
+	--color-base-50: #484F7D;
+	--color-base-60: #827ECF;
+	--color-base-70: #9491CE;
+	--color-base-100: #FEFEFF;
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
-	display: none;
-}
+	/* === Accent (teal) === */
+	--accent-h: 181;
+	--accent-s: 80%;
+	--accent-l: 43%;
 
-svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 0;
-	ry: 0;
-}
+	/* === Extended colors === */
+	--color-red: #FF6E9C;
+	--color-orange: #f28d52;
+	--color-yellow: #FFE46B;
+	--color-green: #7EF3CA;
+	--color-cyan: #66E9EC;
+	--color-blue: #7998F2;
+	--color-purple: #B07AFC;
+	--color-pink: #F26196;
 
-.menu {
-	padding: var(--size-2-1);
-}
+	/* === Semantic backgrounds === */
+	--background-primary: #181036;
+	--background-primary-alt: #1E1E3F;
+	--background-secondary: #130C29;
+	--background-secondary-alt: #130C29;
+	--background-modifier-border: #372B64;
 
-.menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
-}
+	/* === Text === */
+	--text-normal: #FEFEFF;
+	--text-muted: #9491CE;
+	--text-faint: #484F7D;
+	--text-accent: #18C1C4;
+	--text-accent-hover: #66E9EC;
+	--text-on-accent: #130C29;
+	--text-error: #FF6E9C;
+	--text-selection: #231458d6;
+	--text-highlight-bg: #863BFF8F;
+	--caret-color: #F85E9F;
 
-.menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+	/* === Interactive elements === */
+	--interactive-normal: #261B4D;
+	--interactive-hover: #372B64;
+	--interactive-accent: #18C1C4;
+	--interactive-accent-hover: #66E9EC;
+
+	/* === Code / Syntax highlighting === */
+	--code-background: #130C29;
+	--code-normal: #FEFEFF;
+	--code-comment: #8786ac;
+	--code-function: #7998F2;
+	--code-keyword: #F26196;
+	--code-string: #66E9EC;
+	--code-operator: #B07AFC;
+	--code-property: #FFE46B;
+	--code-punctuation: #D6DEEB;
+	--code-tag: #C4A2F5;
+	--code-value: #F5A394;
+	--code-important: #FF6E9C;
+
+	/* === Headings === */
+	--h1-color: #82B1FF;
+	--h2-color: #7998F2;
+	--h3-color: #B07AFC;
+	--h4-color: #C4A2F5;
+	--h5-color: #66E9EC;
+	--h6-color: #9491CE;
+	--heading-formatting: #484F7D;
+
+	/* === Links === */
+	--link-color: #18C1C4;
+	--link-color-hover: #66E9EC;
+	--link-decoration: none;
+	--link-decoration-hover: underline;
+	--link-external-color: #A599E9;
+	--link-external-color-hover: #C4A2F5;
+	--link-unresolved-color: #FF6E9C;
+
+	/* === Bold / Italic === */
+	--bold-color: #F3CA7E;
+	--italic-color: #B07AFC;
+
+	/* === Tags === */
+	--tag-color: #18C1C4;
+	--tag-background: #18C1C415;
+	--tag-border-color: #18C1C430;
+
+	/* === Blockquotes === */
+	--blockquote-border-color: #7EF3CA;
+	--blockquote-color: #EFEFEF;
+	--blockquote-font-style: italic;
+
+	/* === Typography === */
+	--font-monospace-theme: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
 }
