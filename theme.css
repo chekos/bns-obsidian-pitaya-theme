@@ -181,11 +181,91 @@
 	--tag-color: var(--color-orange);
 	--tag-background: #D4A57415;
 	--tag-border-color: #D4A57430;
+	--tag-radius: 0.5em;
+
+	/* === Lists === */
+	--list-indent: 1em;
+
+	/* === Tables === */
+	--table-background: transparent;
+	--table-border-width: 0px;
+	--table-border-color: transparent;
+	--table-text-color: var(--color-base-100);
+	--table-text-size: 0.9em;
+	--table-line-height: 1.6;
+	--table-cell-vertical-alignment: top;
+	--table-header-background: transparent;
+	--table-header-background-hover: transparent;
+	--table-header-border-width: 1px;
+	--table-header-border-color: var(--color-base-50);
+	--table-header-font: "Geist Sans", system-ui, -apple-system, sans-serif;
+	--table-header-size: 0.78em;
+	--table-header-weight: 600;
+	--table-header-color: var(--color-base-70);
+	--table-row-alt-background: transparent;
+	--table-row-background-hover: rgba(255, 255, 255, 0.03);
+	--table-row-last-border-width: 0px;
+	--table-column-alt-background: transparent;
+	--table-column-first-border-width: 0px;
+	--table-column-last-border-width: 0px;
+
+	/* === Callouts === */
+	--callout-border-width: 2px;
+	--callout-border-opacity: 0.7;
+	--callout-padding: 12px 16px;
+	--callout-radius: 4px;
+	--callout-blend-mode: normal;
+	--callout-title-size: 0.85em;
+	--callout-content-padding: 8px 14px 12px 14px;
+	--callout-content-background: rgba(0, 0, 0, 0.15);
+	/* Cool contrast — slate neutral, sage positive, amber caution, red critical */
+	--callout-default: 100, 108, 140;
+	--callout-info: 100, 108, 140;
+	--callout-tip: 139, 170, 144;
+	--callout-success: 139, 170, 144;
+	--callout-todo: 100, 108, 140;
+	--callout-summary: 100, 108, 140;
+	--callout-question: 212, 165, 116;
+	--callout-example: 100, 108, 140;
+	--callout-warning: 212, 165, 116;
+	--callout-error: 212, 118, 118;
+	--callout-bug: 212, 118, 118;
+	--callout-quote: 100, 108, 140;
 
 	/* === Blockquotes === */
 	--blockquote-border-color: #D4A57466;
 	--blockquote-color: #E8E3DD;
 	--blockquote-font-style: italic;
+
+	/* === Graph View === */
+	--graph-node: #D4A574;
+	--graph-node-focused: #F5D0A9;
+	--graph-node-unresolved: #4A4858;
+	--graph-node-tag: #8BAA90;
+	--graph-node-attachment: #B898A5;
+	--graph-text: #908D9E;
+	--graph-line: #2A2830;
+
+	/* === Canvas === */
+	--canvas-background: #0C0C10;
+	--canvas-dot-pattern: #1C1C24;
+	--canvas-card-label-color: var(--color-base-100);
+	--canvas-color-1: 212, 165, 116;
+	--canvas-color-2: 139, 170, 144;
+	--canvas-color-3: 184, 152, 165;
+	--canvas-color-4: 181, 133, 173;
+	--canvas-color-5: 144, 141, 158;
+	--canvas-color-6: 212, 118, 118;
+
+	/* === Search === */
+	--search-icon-color: var(--color-base-70);
+	--search-clear-button-color: var(--color-base-70);
+	--search-result-background: var(--color-base-20);
+
+	/* === Scrollbars === */
+	--scrollbar-bg: transparent;
+	--scrollbar-thumb-bg: var(--color-base-35);
+	--scrollbar-active-thumb-bg: var(--color-base-50);
 
 	/* === Typography === */
 	--font-text-theme: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
@@ -200,4 +280,23 @@
 	--h5-font: "Geist Sans", system-ui, -apple-system, sans-serif;
 	--h6-font: "Geist Sans", system-ui, -apple-system, sans-serif;
 	--inline-title-font: "Geist Sans", system-ui, -apple-system, sans-serif;
+}
+
+/* WebKit scrollbar styling */
+.theme-dark ::-webkit-scrollbar {
+	width: 6px;
+	background: transparent;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+	background: #23232E;
+	border-radius: 3px;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+	background: #393A48;
+}
+
+.theme-dark ::-webkit-scrollbar-track {
+	background: transparent;
 }
