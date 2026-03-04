@@ -300,3 +300,54 @@
 .theme-dark ::-webkit-scrollbar-track {
 	background: transparent;
 }
+
+/* ─── Mermaid diagrams ─── */
+/* Break out of the narrow content column to fill the reading view */
+
+.markdown-reading-view {
+	container-type: inline-size;
+}
+
+.markdown-preview-view div.mermaid {
+	width: 95cqi;
+	max-width: none;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	overflow: auto;
+	margin-bottom: 1em;
+	resize: both;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	transition: border-color 0.2s ease;
+}
+
+.markdown-preview-view div.mermaid:hover {
+	border-color: var(--interactive-accent);
+}
+
+/* Resize handle indicator */
+.markdown-preview-view div.mermaid::after {
+	content: '';
+	display: block;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+	border-right: 2px solid var(--interactive-accent);
+	border-bottom: 2px solid var(--interactive-accent);
+	opacity: 0;
+	transition: opacity 0.2s ease;
+	pointer-events: none;
+}
+
+.markdown-preview-view div.mermaid:hover::after {
+	opacity: 0.6;
+}
+
+/* SVG: scale to fit the wider container */
+.markdown-preview-view div.mermaid svg {
+	max-width: 100%;
+	height: auto;
+}
