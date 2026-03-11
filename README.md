@@ -47,12 +47,14 @@ Text contrast meets or exceeds **WCAG 2.1 AA** across all primary reading surfac
 | Bold (`#E0BA78`) | 10.13:1 | AAA |
 | Italic (`#B898A5`) | 7.13:1 | AAA |
 | External links (`#8BAA90`) | 7.29:1 | AAA |
+| Faint text (`#7E7E90`) | 4.66:1 | AA |
 | Muted text (`#908D9E`) | 5.73:1 | AA |
 | Error text (`#D47676`) | 5.88:1 | AA |
 | Headings (H1–H6) | 6.12–12.79:1 | AAA |
 | Code syntax (all tokens) | 5.61–19.37:1 | AA–AAA |
+| UI components (borders, scrollbars) | 3.05:1 | SC 1.4.11 |
 
-**Known limitations**: Some decorative UI elements (borders, scrollbar tracks, graph lines) use intentionally subtle contrast below the 3:1 SC 1.4.11 threshold, following Tufte-inspired minimal chrome principles. This is a deliberate trade-off favoring a distraction-free reading surface over strict non-text contrast conformance.
+**Known limitations**: Some purely decorative elements (graph connection lines, subtle border accents) prioritize a distraction-free reading surface and may fall below the 3:1 SC 1.4.11 threshold.
 
 Design informed by WCAG 2.1 text contrast guidelines, APCA perceptual contrast research, and Material Design dark theme recommendations.
 

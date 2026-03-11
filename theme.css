@@ -96,8 +96,8 @@
 	--color-base-30: #1E1F29;
 	--color-base-35: #23232E;
 	--color-base-40: #272833;
-	--color-base-50: #393A48;
-	--color-base-60: #78788A;
+	--color-base-50: #606172;
+	--color-base-60: #7E7E90;
 	--color-base-70: #908D9E;
 	--color-base-100: #DCDCDC;
 
@@ -126,7 +126,7 @@
 	/* === Text === */
 	--text-normal: var(--color-base-100);
 	--text-muted: var(--color-base-70);
-	--text-faint: var(--color-base-50);
+	--text-faint: var(--color-base-60);
 	--text-accent: var(--color-orange);
 	--text-accent-hover: var(--color-yellow);
 	--text-on-accent: var(--color-base-00);
@@ -162,7 +162,7 @@
 	--h4-color: #DCA0B8;
 	--h5-color: #C992B5;
 	--h6-color: #B585AD;
-	--heading-formatting: var(--color-base-50);
+	--heading-formatting: var(--color-base-60);
 
 	/* === Links === */
 	--link-color: var(--color-orange);
