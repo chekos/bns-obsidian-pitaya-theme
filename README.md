@@ -36,8 +36,29 @@ Falls back to system fonts if not installed.
 
 Or manually: copy `theme.css` to your vault's `.obsidian/themes/BNS Obsidian Pitaya Theme/` directory and create a `manifest.json` there.
 
+## Accessibility
+
+Text contrast meets or exceeds **WCAG 2.1 AA** across all primary reading surfaces:
+
+| Element | Ratio | Level |
+|---|---|---|
+| Body text (`#DCDCDC` on `#121318`) | 13.53:1 | AAA |
+| Accent / links (`#D4A574`) | 8.33:1 | AAA |
+| Bold (`#E0BA78`) | 10.13:1 | AAA |
+| Italic (`#B898A5`) | 7.13:1 | AAA |
+| External links (`#8BAA90`) | 7.29:1 | AAA |
+| Faint text (`#7E7E90`) | 4.66:1 | AA |
+| Muted text (`#908D9E`) | 5.73:1 | AA |
+| Error text (`#D47676`) | 5.88:1 | AA |
+| Headings (H1–H6) | 6.12–12.79:1 | AAA |
+| Code syntax (all tokens) | 5.61–19.37:1 | AA–AAA |
+| UI components (borders, scrollbars) | 3.05:1 | SC 1.4.11 |
+
+**Known limitations**: Some purely decorative elements (graph connection lines, subtle border accents) prioritize a distraction-free reading surface and may fall below the 3:1 SC 1.4.11 threshold.
+
+Design informed by WCAG 2.1 text contrast guidelines, APCA perceptual contrast research, and Material Design dark theme recommendations.
+
 ## Credits
 
 - [Pitaya Smoothie](https://github.com/trallard/pitaya_smoothie) by Tanya Allard — original color palette inspiration
 - Design informed by perspectives from Edward Tufte, Giorgia Lupi, Nadieh Bremer, and accessibility research
-- WCAG 2.1, APCA, Material Design dark theme guidelines
