@@ -231,6 +231,8 @@
 	--callout-error: 212, 118, 118;
 	--callout-bug: 212, 118, 118;
 	--callout-quote: 100, 108, 140;
+	/* Muted lavender — editorial annotations */
+	--callout-comment: 160, 140, 190;
 
 	/* === Blockquotes === */
 	--blockquote-border-color: #D4A57466;
@@ -350,4 +352,10 @@
 .markdown-preview-view div.mermaid svg {
 	max-width: 100%;
 	height: auto;
+}
+
+/* === Comment callout === */
+.callout[data-callout="comment"] {
+	--callout-color: 160, 140, 190;
+	--callout-icon: lucide-message-circle;
 }

@@ -36,6 +36,53 @@ Falls back to system fonts if not installed.
 
 Or manually: copy `theme.css` to your vault's `.obsidian/themes/BNS Obsidian Pitaya Theme/` directory and create a `manifest.json` there.
 
+## Comment Callout
+
+A custom `[!comment]` callout for leaving visible editorial annotations — useful when collaborating with AI tools or reviewing your own writing. No plugins required.
+
+### Basic comment
+
+```markdown
+> [!comment]- **@chekos** · 2026-03-25 · re: "intro paragraph"
+> This opening could be tighter. Consider leading with the key insight.
+```
+
+The convention is `[!comment]-` (collapsed by default) with **@author**, date, and an optional `re:` reference to the text being discussed.
+
+### Resolved comment
+
+```markdown
+> [!comment]- ~~**@claude** · 2026-03-25 · re: "data pipeline section"~~
+> ~~Add an example showing the transformation step.~~
+> **Resolved** by @chekos · 2026-03-25
+```
+
+### Threaded reply
+
+```markdown
+> [!comment]- **@claude** · 2026-03-25 · re: "metrics summary"
+> Which metrics are these? Be specific.
+>> [!comment] **@chekos** · 2026-03-25
+>> Good catch — clarified to "monthly active users and retention rate."
+```
+
+### Typed comments
+
+Use tags to categorize:
+
+```markdown
+> [!comment]- [edit] **@claude** · 2026-03-25 · re: "the results show..."
+> Rephrase to active voice.
+
+> [!comment]- [question] **@chekos** · 2026-03-25 · re: "methodology"
+> Should we cite the original paper here?
+
+> [!comment]- [flag] **@claude** · 2026-03-25 · re: "performance claims"
+> This needs a source or benchmark reference.
+```
+
+A quick `> [!comment] fix this` works too — the structured format is a convention, not a requirement.
+
 ## Accessibility
 
 Text contrast meets or exceeds **WCAG 2.1 AA** across all primary reading surfaces:
@@ -52,6 +99,7 @@ Text contrast meets or exceeds **WCAG 2.1 AA** across all primary reading surfac
 | Error text (`#D47676`) | 5.88:1 | AA |
 | Headings (H1–H6) | 6.12–12.79:1 | AAA |
 | Code syntax (all tokens) | 5.61–19.37:1 | AA–AAA |
+| Comment callout (`#A08CBE`) | 6.17:1 | AA |
 | UI components (borders, scrollbars) | 3.05:1 | SC 1.4.11 |
 
 **Known limitations**: Some purely decorative elements (graph connection lines, subtle border accents) prioritize a distraction-free reading surface and may fall below the 3:1 SC 1.4.11 threshold.
