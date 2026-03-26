@@ -1,71 +1,43 @@
 ---
 name: comment
-description: "Insert a structured editorial comment callout into the current Obsidian document. Use when reviewing, editing, or annotating writing — especially when collaborating with AI tools. Supports basic comments, resolved comments, threaded replies, and typed tags ([edit], [question], [flag])."
-argument-hint: "[optional: edit|question|flag] <comment text>"
+description: "Convention for leaving visible editorial comments in Obsidian markdown files using [!comment] callouts. Load this skill whenever you need to add comments, respond to existing comments, or review a document with annotations instead of direct edits."
 ---
 
-# Insert Comment Callout
+# Comment Callout Convention
 
-Add a `[!comment]` callout to an Obsidian markdown document for visible editorial annotations.
+This defines how to use `[!comment]` callouts in Obsidian markdown files. These are visible, structured editorial annotations — like Google Docs comments, but in plain markdown.
 
-## How It Works
+Use this convention whenever:
+- The user asks you to review or give feedback on a document without editing it directly
+- The user asks you to respond to comments left in a document
+- You need to leave notes, questions, or suggestions on a piece of writing
+- The user asks you to annotate, comment on, or flag issues in a draft
 
-When invoked, insert a comment callout at the appropriate location in the document the user is working on. Follow these steps:
+## Format
 
-### Step 1: Determine comment context
+### Basic comment
 
-Ask the user (if not already clear from context):
-
-1. **What file?** — Which markdown file to annotate. If the user has been working on a specific file in this session, default to that.
-2. **Where?** — Where in the document the comment should go. The user may reference a section heading, a line number, or quote a passage.
-3. **What type?** — A plain comment, or a typed one: `[edit]`, `[question]`, or `[flag]`. If the user provided an argument like `/comment edit This needs active voice`, parse the type from the first word.
-
-If the user provided everything inline (e.g., `/comment flag re: "intro" This claim needs a citation`), skip the questions and proceed directly.
-
-### Step 2: Determine the author
-
-Use the following logic to set the `@author` field:
-
-- If a previous comment callout exists in the file, check its author and reuse it if appropriate
-- If the user's name or handle is known from context (e.g., git config, prior conversation), use that
-- If running as an AI assistant, use `@claude` (or the appropriate model name)
-- If uncertain, ask
-
-### Step 3: Build the callout
-
-Use today's date and construct the callout in this format:
-
-**Basic comment:**
 ```markdown
 > [!comment]- **@author** · YYYY-MM-DD · re: "referenced text"
 > The comment body goes here.
 ```
 
-**Typed comment** (when a tag is specified):
+| Part | Purpose |
+|------|---------|
+| `[!comment]-` | Callout type, collapsed by default (`-`) |
+| `**@author**` | Who left the comment |
+| `YYYY-MM-DD` | Date |
+| `re: "..."` | Short excerpt (5-15 words) from the passage being discussed, or a section heading |
+| Body | The actual comment — concise and actionable |
+
+### Typed comment
+
+Add a tag before the author to categorize:
+
 ```markdown
-> [!comment]- [type] **@author** · YYYY-MM-DD · re: "referenced text"
-> The comment body goes here.
+> [!comment]- [edit] **@author** · YYYY-MM-DD · re: "referenced text"
+> The comment body.
 ```
-
-**Rules:**
-- Always use `-` (collapsed by default) unless the user asks for expanded
-- The `re: "..."` field should quote a short excerpt (5-15 words) from the passage being commented on. If the user pointed to a section heading, use that instead
-- Keep the comment body concise and actionable
-- Use the current date in `YYYY-MM-DD` format
-
-### Step 4: Insert the comment
-
-Place the callout **directly below** the paragraph or section it references. Do not insert it in the middle of a paragraph — always after a blank line following the target text.
-
-If the user asks to comment on multiple sections, insert each comment after its respective section.
-
-### Step 5: Confirm
-
-After inserting, briefly confirm what was added and where. Example:
-
-> Added a `[flag]` comment on the "methodology" section in `draft.md`.
-
-## Comment Types Reference
 
 | Tag | When to use |
 |-----|-------------|
@@ -74,9 +46,21 @@ After inserting, briefly confirm what was added and where. Example:
 | `[question]` | Asking for clarification or more information |
 | `[flag]` | Marking something that needs attention (missing source, factual concern, etc.) |
 
+## Author
+
+- When you (the AI) are leaving comments, use `**@claude**` (or the appropriate model name)
+- When the user's name or handle is known from context (git config, prior conversation, memory), use that for comments attributed to them
+- If existing comments are already in the file, follow the author convention already in use
+
+## Placement
+
+- Place comments **directly below** the paragraph or section they reference, after a blank line
+- Never insert a comment in the middle of a paragraph
+- When commenting on multiple sections, each comment goes after its respective section
+
 ## Resolving Comments
 
-When the user asks to resolve a comment, apply strikethrough to the original comment and add a resolution line:
+When a comment has been addressed, apply strikethrough to the title and body, and add a resolution line:
 
 ```markdown
 > [!comment]- ~~[flag] **@claude** · 2026-03-25 · re: "performance claims"~~
@@ -84,9 +68,9 @@ When the user asks to resolve a comment, apply strikethrough to the original com
 > **Resolved** by @chekos · 2026-03-25
 ```
 
-## Threading Replies
+## Replying to Comments
 
-When the user replies to an existing comment, nest it inside the original using a second blockquote level:
+Nest replies inside the parent comment using a second blockquote level. Replies use `[!comment]` (no `-`) since they're already inside a collapsed parent:
 
 ```markdown
 > [!comment]- **@claude** · 2026-03-25 · re: "metrics summary"
@@ -95,14 +79,30 @@ When the user replies to an existing comment, nest it inside the original using 
 >> Clarified to "monthly active users and retention rate."
 ```
 
-Note: replies use `[!comment]` (no `-`) since they're already inside a collapsed parent.
+## Common Workflows
 
-## Batch Mode
+### "Review my draft, don't edit directly"
 
-When asked to review an entire document, read through it and insert multiple comments where warranted. Use appropriate types for each. At the end, provide a summary:
+Read the document. For each issue you find, insert a comment at the relevant location using the appropriate type. After all comments are placed, summarize what you added:
 
 > Added 4 comments to `essay.md`:
-> - [edit] on "intro paragraph" — tighten opening
-> - [question] on "methodology" — missing citation
-> - [flag] on "results" — unsubstantiated claim
+> - `[edit]` on "intro paragraph" — tighten opening
+> - `[question]` on "methodology" — missing citation
+> - `[flag]` on "results" — unsubstantiated claim
 > - General on "conclusion" — strong ending, consider expanding
+
+### "Answer the comments in this document"
+
+Read through the document looking for existing `[!comment]` callouts. For each one:
+- If it's a question you can answer: add a threaded reply with the answer
+- If it's an edit suggestion you agree with: make the edit in the text, then resolve the comment
+- If it's a flag: investigate and either resolve it (with explanation) or reply with what you found
+- If it needs the user's input: reply explaining what decision is needed
+
+### "Resolve all the comments"
+
+Find all `[!comment]` callouts in the document. For each one, apply the resolution format (strikethrough + resolved-by line). Only resolve comments that have actually been addressed — if the underlying issue hasn't been fixed, leave the comment open and flag it.
+
+## Flexibility
+
+The structured format (`@author · date · re: "text"`) is a convention, not a rigid requirement. A quick `> [!comment] fix this` is perfectly valid. Use the full format when context and attribution matter (reviews, collaboration); use the short form for quick personal notes.
