@@ -1,6 +1,6 @@
 ---
 name: comment
-description: "Convention for leaving visible editorial comments in Obsidian markdown files using [!comment] callouts. Load this skill whenever you need to add comments, respond to existing comments, or review a document with annotations instead of direct edits."
+description: "Add, answer, and resolve [!comment] callouts in Obsidian markdown files. Use when leaving editorial comments on a draft, replying to existing comment threads, resolving addressed feedback, flagging claims that need sources, or reviewing writing with annotations instead of direct edits. Defines the callout format: author, date, text reference, type tags ([edit], [question], [flag]), threading, and resolution."
 ---
 
 # Comment Callout Convention
