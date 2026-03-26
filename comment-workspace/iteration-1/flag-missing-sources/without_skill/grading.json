@@ -1,0 +1,13 @@
+{
+  "run_id": "flag-missing-sources-without_skill",
+  "expectations": [
+    {"text": "Uses [!comment] callout syntax", "passed": false, "evidence": "Uses HTML comments (<!-- [@claude, 2026-03-25]: ... -->) instead of [!comment] callouts"},
+    {"text": "Uses [flag] type tag specifically", "passed": false, "evidence": "No type tags — all comments are untyped HTML comments"},
+    {"text": "Flags the Stanford study claim", "passed": true, "evidence": "HTML comment flags 'a Stanford study' needing citation"},
+    {"text": "Flags the Microsoft research claim", "passed": true, "evidence": "HTML comment flags Microsoft research needing citation"},
+    {"text": "Flags the $11,000 savings figure", "passed": true, "evidence": "HTML comment flags '$11,000 per year' needing source"},
+    {"text": "Flags the 30-40% real estate drop", "passed": true, "evidence": "HTML comment flags '30-40%' drop needing source"},
+    {"text": "Original text is completely untouched", "passed": true, "evidence": "Original text preserved"},
+    {"text": "Includes re: field referencing the flagged text", "passed": false, "evidence": "No re: field — HTML comments reference text inline in prose"}
+  ]
+}

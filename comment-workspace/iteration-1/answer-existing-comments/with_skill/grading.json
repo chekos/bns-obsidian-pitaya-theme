@@ -1,0 +1,11 @@
+{
+  "run_id": "answer-existing-comments-with_skill",
+  "expectations": [
+    {"text": "Existing comments are preserved unchanged", "passed": true, "evidence": "All 3 original @chekos comments preserved exactly"},
+    {"text": "Replies use nested blockquote (>>) threading format", "passed": true, "evidence": "All replies use >> [!comment] nested inside parent"},
+    {"text": "Replies use [!comment] without dash since nested", "passed": true, "evidence": "All 3 replies use [!comment] (no dash)"},
+    {"text": "All three existing comments receive a response", "passed": true, "evidence": "Question, flag, and general comment all have replies"},
+    {"text": "Includes @author and date in replies", "passed": true, "evidence": "All replies use **@claude** · 2026-03-25"},
+    {"text": "Does not create separate standalone comment blocks for replies", "passed": true, "evidence": "All replies nested inside parent comments, no standalone blocks"}
+  ]
+}

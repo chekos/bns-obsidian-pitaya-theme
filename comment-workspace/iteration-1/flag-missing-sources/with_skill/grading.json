@@ -1,0 +1,13 @@
+{
+  "run_id": "flag-missing-sources-with_skill",
+  "expectations": [
+    {"text": "Uses [!comment] callout syntax", "passed": true, "evidence": "All 9 comments use > [!comment]- format"},
+    {"text": "Uses [flag] type tag specifically", "passed": true, "evidence": "All 9 comments use [flag] tag"},
+    {"text": "Flags the Stanford study claim", "passed": true, "evidence": "Comment on 'One Stanford study found a 13% increase'"},
+    {"text": "Flags the Microsoft research claim", "passed": true, "evidence": "Comment on 'recent research from Microsoft suggests'"},
+    {"text": "Flags the $11,000 savings figure", "passed": true, "evidence": "Comment on 'save $11,000 per year for each employee'"},
+    {"text": "Flags the 30-40% real estate drop", "passed": true, "evidence": "Comment on 'Commercial real estate values have dropped by 30-40%'"},
+    {"text": "Original text is completely untouched", "passed": true, "evidence": "All original text preserved"},
+    {"text": "Includes re: field referencing the flagged text", "passed": true, "evidence": "All 9 comments include re: with quoted excerpts"}
+  ]
+}

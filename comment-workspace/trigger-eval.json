@@ -1,0 +1,22 @@
+[
+  {"query": "hey gotti can you look at the comments i left in my draft about the mexico city piece and answer anything that needs answering", "should_trigger": true},
+  {"query": "review this blog post for me but don't change anything directly, just leave notes on what you think needs work", "should_trigger": true},
+  {"query": "i wrote some notes on chekos's essay about data pipelines, can you go through and resolve the ones that have been addressed", "should_trigger": true},
+  {"query": "flag anything in this newsletter draft that makes a claim without a source — i want to do a citation pass before publishing", "should_trigger": true},
+  {"query": "can you annotate my writing with suggestions? like google docs comments but in obsidian", "should_trigger": true},
+  {"query": "go through docs/drafts/remote-work-essay.md and leave editorial feedback as comments, use the [edit] tag for style suggestions and [flag] for factual issues", "should_trigger": true},
+  {"query": "there are a bunch of comment callouts in my obsidian note from last week's review session, can you reply to the open questions", "should_trigger": true},
+  {"query": "i need you to do a review pass on this article. don't touch the text, just add your thoughts as callout comments with your name on them", "should_trigger": true},
+  {"query": "take a look at the [!comment] blocks in this file and resolve the ones i've already fixed", "should_trigger": true},
+  {"query": "can you read through my draft and add [question] comments wherever something is unclear to you as a reader", "should_trigger": true},
+  {"query": "fix the typo on line 34 of my essay where it says 'teh' instead of 'the'", "should_trigger": false},
+  {"query": "rewrite the intro paragraph of my blog post to be more engaging", "should_trigger": false},
+  {"query": "add a new section about machine learning to my obsidian note", "should_trigger": false},
+  {"query": "can you proofread this and fix all the grammar mistakes directly in the text", "should_trigger": false},
+  {"query": "create a new obsidian note about my meeting with the design team today", "should_trigger": false},
+  {"query": "summarize this PDF and put the key points in a markdown file", "should_trigger": false},
+  {"query": "help me set up a CSS snippet for my obsidian vault to change the font size", "should_trigger": false},
+  {"query": "convert this google doc into markdown format for my obsidian vault", "should_trigger": false},
+  {"query": "i have some comments in my python code that need updating, can you fix the docstrings", "should_trigger": false},
+  {"query": "write a commit message for the changes i just made to the theme css", "should_trigger": false}
+]

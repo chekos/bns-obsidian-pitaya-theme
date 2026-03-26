@@ -1,0 +1,12 @@
+{
+  "run_id": "review-draft-with-comments-without_skill",
+  "expectations": [
+    {"text": "Uses [!comment] callout syntax", "passed": false, "evidence": "Uses HTML comments (<!-- Comment by @claude ... -->) instead of [!comment] callouts"},
+    {"text": "Comments placed after paragraphs, not mid-paragraph", "passed": true, "evidence": "All HTML comments placed after paragraphs with blank lines"},
+    {"text": "Original text is completely untouched", "passed": true, "evidence": "Original text preserved"},
+    {"text": "Uses collapsed format with dash (-)", "passed": false, "evidence": "HTML comments have no collapse/expand functionality"},
+    {"text": "Includes @author and date in each comment", "passed": true, "evidence": "Uses 'Comment by @claude (2026-03-25):' format"},
+    {"text": "Uses appropriate type tags where warranted", "passed": false, "evidence": "No type tags used — all comments are untyped"},
+    {"text": "Includes re: field referencing the text being commented on", "passed": false, "evidence": "No re: field — comments reference context implicitly in prose"}
+  ]
+}

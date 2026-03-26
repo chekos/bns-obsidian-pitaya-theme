@@ -1,0 +1,15 @@
+{
+  "eval_id": 3,
+  "eval_name": "flag-missing-sources",
+  "prompt": "Flag anything in this essay that needs a source or citation.",
+  "assertions": [
+    {"text": "Uses [!comment] callout syntax", "type": "format"},
+    {"text": "Uses [flag] type tag specifically", "type": "convention"},
+    {"text": "Flags the Stanford study claim (Bloom et al.)", "type": "coverage"},
+    {"text": "Flags the Microsoft research claim", "type": "coverage"},
+    {"text": "Flags the $11,000 savings figure", "type": "coverage"},
+    {"text": "Flags the 30-40% real estate drop", "type": "coverage"},
+    {"text": "Original text is completely untouched", "type": "preservation"},
+    {"text": "Includes re: field referencing the flagged text", "type": "convention"}
+  ]
+}

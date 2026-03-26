@@ -1,0 +1,12 @@
+{
+  "run_id": "review-draft-with-comments-with_skill",
+  "expectations": [
+    {"text": "Uses [!comment] callout syntax", "passed": true, "evidence": "All 7 comments use > [!comment]- format"},
+    {"text": "Comments placed after paragraphs, not mid-paragraph", "passed": true, "evidence": "All comments follow blank lines after target paragraphs"},
+    {"text": "Original text is completely untouched", "passed": true, "evidence": "All original markdown headings, paragraphs preserved exactly"},
+    {"text": "Uses collapsed format with dash (-)", "passed": true, "evidence": "All 7 comments use [!comment]- with dash"},
+    {"text": "Includes @author and date in each comment", "passed": true, "evidence": "All use **@claude** · 2026-03-25"},
+    {"text": "Uses appropriate type tags where warranted", "passed": true, "evidence": "Uses [edit], [flag], [question] tags appropriately; general comment has no tag"},
+    {"text": "Includes re: field referencing the text being commented on", "passed": true, "evidence": "All 7 comments include re: with quoted text excerpts"}
+  ]
+}
