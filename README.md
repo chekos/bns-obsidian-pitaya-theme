@@ -106,6 +106,25 @@ Text contrast meets or exceeds **WCAG 2.1 AA** across all primary reading surfac
 
 Design informed by WCAG 2.1 text contrast guidelines, APCA perceptual contrast research, and Material Design dark theme recommendations.
 
+## Slack Theme
+
+Paste into **Slack > Preferences > Themes > Create a custom theme**:
+
+```
+#0C0C10,#1E1F29,#D4A574,#DCDCDC,#16161E,#908D9E,#8BAA90,#D47676
+```
+
+| Slack Field | Hex |
+|---|---|
+| Column BG | `#0C0C10` |
+| Menu BG Hover | `#1E1F29` |
+| Active Item | `#D4A574` |
+| Active Item Text | `#DCDCDC` |
+| Hover Item | `#16161E` |
+| Text Color | `#908D9E` |
+| Active Presence | `#8BAA90` |
+| Mention Badge | `#D47676` |
+
 ## Credits
 
 - [Pitaya Smoothie](https://github.com/trallard/pitaya_smoothie) by Tanya Allard — original color palette inspiration
